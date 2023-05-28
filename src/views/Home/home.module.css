@@ -1,0 +1,134 @@
+.homeContainer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroData {
+  width: 100%;
+}
+
+.heroExplore {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.homeHeader {
+  font-size: 80px;
+}
+
+.exploreBtn {
+  position: relative;
+  z-index: 5;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  outline: 0px solid #979797;
+  transition: 200ms ease all;
+}
+
+.exploreLink {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.exploreLink::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  transform: translateZ(-1px);
+  background-color: #ffffff;
+  opacity: 0.1;
+  transition: 150ms ease all;
+}
+
+.exploreLink:hover::after {
+  transform: scale(1.5);
+}
+
+/* || BREAK POINTS */
+
+@media screen and (min-width: 768px) {
+  .homeHeader {
+    font-size: 150px;
+  }
+
+  .heroExplore {
+    margin-top: 9rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .exploreBtn {
+    text-transform: uppercase;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    outline: 0px solid #979797;
+    transition: 200ms ease all;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .homeContainer {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .heroData {
+    width: 45%;
+  }
+
+  .homeHeader {
+    font-size: 130px;
+  }
+
+  .heroExplore {
+    margin-top: 0;
+    width: 55%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .exploreBtn {
+    text-transform: uppercase;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    outline: 0px solid #979797;
+    transition: 200ms ease all;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .homeHeader {
+    font-size: 160px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .homeContainer {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 15.6rem 4rem 4rem 4rem;
+    display: flex;
+    flex-direction: row;
+  }
+}
